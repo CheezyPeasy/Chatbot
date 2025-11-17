@@ -5,11 +5,12 @@ import operator as op
 import requests
 import re
 import time
+import os
 
 app = Flask(__name__)
 
 # ⛔ DELETE your old key — replace with a new one here
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY =os.environ.get("OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
