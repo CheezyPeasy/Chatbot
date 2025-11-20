@@ -9,7 +9,7 @@ import time
 app = Flask(__name__)
 
 # ⛔ DELETE your old key — replace with a new one here
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
