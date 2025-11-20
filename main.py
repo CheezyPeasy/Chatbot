@@ -5,12 +5,11 @@ import operator as op
 import requests
 import re
 import time
-import os
 
 app = Flask(__name__)
 
 # ⛔ DELETE your old key — replace with a new one here
-OPENROUTER_API_KEY =os.environ.get("OPENROUTER_API_KEY")
+OPENROUTER_API_KEY = "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"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
@@ -169,6 +168,4 @@ def chat():
 # Run server
 # -----------------------
 if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True)
